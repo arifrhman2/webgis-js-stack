@@ -8,7 +8,7 @@
       <ul class="nav-links">
         <li><a :class="{ active: activeTab === 'home' }" @click="activeTab = 'home'">🏠 Home</a></li>
         <li><a :class="{ active: activeTab === 'about' }" @click="activeTab = 'about'">ℹ️ About</a></li>
-        <li><router-link to="/map" class="map-link">📍 Map WebGIS</router-link></li>
+        <li><router-link to="/map" class="map-link">🗺️ WebGIS</router-link></li>
       </ul>
     </nav>
 
@@ -165,10 +165,24 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
+
+// Default tab
 const activeTab = ref('home')
-const aboutTab = ref('sejarah') 
+const aboutTab = ref('sejarah')
+
+// Logika membaca URL saat halaman pertama kali dibuka
+onMounted(() => {
+  if (route.query.tab) {
+    activeTab.value = route.query.tab // Otomatis buka tab About
+  }
+  if (route.query.sub) {
+    aboutTab.value = route.query.sub // Otomatis arahkan ke sub-menu Sejarah
+  }
+})
 </script>
 
 <style 
