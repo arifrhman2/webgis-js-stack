@@ -186,9 +186,6 @@ const verifyToken = (req, res, next) => {
 
 // --- PENERAPANNYA ---
 
-// API GET (Ambil Data) -> Biarkan publik, tidak perlu Satpam ✅
-app.get('/api/candi/fasum', async (req, res) => { ... });
-
 // API POST (Tambah Data) -> WAJIB lapor Satpam dulu 🔒
 app.post('/api/candi/fasum', verifyToken, async (req, res) => {
     // Hanya yang punya token yang bisa sampai ke baris kode ini
