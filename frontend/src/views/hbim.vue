@@ -78,7 +78,7 @@
 
 /* === NAVBAR === */
 .map-navbar {
-  height: 70px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between;
+  height: 54px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between;
   padding: 0 5vw; background: rgba(15, 15, 17, 0.85); backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05); z-index: 1000;
 }
@@ -89,7 +89,7 @@
 .nav-links a.active, .nav-links a:hover { color: #fff; }
 
 /* === MAIN CONTENT === */
-.main-content { padding-top: 70px; display: flex; flex: 1; position: relative; overflow: hidden; }
+.main-content { padding-top: 54px; display: flex; flex: 1; position: relative; overflow: hidden; }
 
 /* === VIEWER WRAPPER (Kiri) === */
 .viewer-wrapper { flex: 1; position: relative; background: #000; display: flex; }

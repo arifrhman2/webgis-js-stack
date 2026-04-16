@@ -6,7 +6,7 @@
 /* === BACKGROUNDS === */
 .fixed-bg {
   position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2;
-  background-image: url('https://asset.kompas.com/crops/WmP-rjiGZWBAuHZ4ABwO-NCkzg0=/0x0:996x664/1200x800/data/photo/2022/07/27/62e1554e3d8e6.jpg'); 
+  background-image: url('/images/PANO_20240529_075805.jpg'); 
   background-size: cover; background-position: center; background-attachment: fixed;
 }
 #fluid-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; filter: blur(60px); opacity: 0.3; pointer-events: none;}

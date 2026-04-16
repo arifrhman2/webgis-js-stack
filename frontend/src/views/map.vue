@@ -187,7 +187,7 @@ onBeforeUnmount(() => { if (animationFrameId) cancelAnimationFrame(animationFram
 
 /* === NAVBAR (Fixed dihapus agar tidak overlay) === */
 .map-navbar {
-  height: 70px; 
+  height: 54px; 
   display: flex; 
   align-items: center; 
   justify-content: space-between;
@@ -207,7 +207,7 @@ onBeforeUnmount(() => { if (animationFrameId) cancelAnimationFrame(animationFram
 /* === MAIN CONTENT LAYOUT === */
 .main-content { 
   display: flex; 
-  padding-top: 70px; /* Memberi ruang untuk navbar */
+  padding-top: 54px; /* Memberi ruang untuk navbar */
   flex: 1; /* Mengambil sisa layar di bawah navbar */
   position: relative;
   overflow: hidden; 
