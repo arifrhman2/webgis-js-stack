@@ -11,6 +11,7 @@
         <li><router-link to="/">Home</router-link></li>
         <li><router-link :to="{ path: '/', query: { tab: 'about', sub: 'sejarah' } }">About</router-link></li>
         <li><router-link to="/map" class="active">Map WebGIS</router-link></li>
+        <li><router-link to="/hbim">3D HBIM</router-link></li>
       </ul>
     </nav>
 
@@ -206,6 +207,7 @@ onBeforeUnmount(() => { if (animationFrameId) cancelAnimationFrame(animationFram
 /* === MAIN CONTENT LAYOUT === */
 .main-content { 
   display: flex; 
+  padding-top: 70px; /* Memberi ruang untuk navbar */
   flex: 1; /* Mengambil sisa layar di bawah navbar */
   position: relative;
   overflow: hidden; 
@@ -236,7 +238,7 @@ onBeforeUnmount(() => { if (animationFrameId) cancelAnimationFrame(animationFram
   position: absolute; top: 300px; left: 0px; z-index: 1001;
   background: rgba(20, 20, 25, 0.8); backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1); color: white;
-  width: 35px; height: 35px; border-radius: 6px; cursor: pointer;
+  width: 17px; height: 35px; border-radius: 6px; cursor: pointer;
 }
 .toggle-sidebar-btn span { transition: 0.3s; display: block; }
 .toggle-sidebar-btn span.rotate { transform: rotate(180deg); }

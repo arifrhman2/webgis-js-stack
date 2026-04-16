@@ -2,13 +2,15 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Landing from '../views/landing.vue'
 import MapView from '../views/map.vue'
 import Login from '../views/login.vue'
-import Dashboard from '../views/dashboard.vue' // Halaman baru
+import Dashboard from '../views/dashboard.vue' 
+import HbimView from '../views/hbim.vue'
 
 const routes = [
   { path: '/', name: 'Landing', component: Landing },
   { path: '/login', name: 'Login', component: Login },
-  { path: '/map', name: 'Map', component: MapView }, // Terbuka untuk publik!
-  { 
+  { path: '/map', name: 'Map', component: MapView }, 
+  { path: '/hbim', name: 'Hbim', component: HbimView },
+  {
     path: '/admin', 
     name: 'Dashboard', 
     component: Dashboard,

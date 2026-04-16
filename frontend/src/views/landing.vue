@@ -12,6 +12,7 @@
         <li><a href="#" :class="{ active: activeTab === 'home' }" @click.prevent="activeTab = 'home'">Home</a></li>
         <li><a href="#" :class="{ active: activeTab === 'about' }" @click.prevent="activeTab = 'about'">About</a></li>
         <li><router-link to="/map">Map WebGIS</router-link></li>
+        <li><router-link to="/hbim">3D HBIM</router-link></li>
       </ul>
     </nav>
 
@@ -19,7 +20,7 @@
       <section id="home-hero">
         <div class="badge reveal">Digital Temple</div>
         <h1 class="reveal delay-1">Candi Selogriyo</h1>
-        <p class="hero-desc reveal delay-2">Menyelaraskan data geospasial dengan model arsitektur 3D candi bersejarah tanpa hambatan. Presisi data dalam genggaman.</p>
+        <p class="hero-desc reveal delay-2">Menyelaraskan data geospasial dengan model arsitektur 3D candi bersejarah. Presisi data dalam genggaman.</p>
         <div class="reveal delay-2" style="display: flex; justify-content: center; gap: 15px;">
           <button @click="$router.push('/map')" class="btn">Mulai Eksplorasi</button>
           <button @click="activeTab = 'about'" class="btn btn-outline">Dokumentasi</button>
@@ -42,7 +43,7 @@
           <div class="text-content">
             <h2>3D HBIM Viewer</h2>
             <p>Penampil lanskap candi dan model warisan yang elegan. Render struktur historis langsung di dalam browser dengan dukungan integrasi metadata secara mendalam.</p>
-            <div><button class="btn btn-outline" style="padding: 10px 24px; font-size: 0.85rem; margin-left: 0;">Segera Hadir</button></div>
+            <div><button @click="$router.push('/hbim')" class="btn" style="padding: 10px 24px; font-size: 0.85rem;">Buka 3D HBIM</button></div>
           </div>
           <div class="visual-container"><span style="font-size: 80px;">🏛️</span></div>
         </div>
@@ -52,9 +53,9 @@
     <div v-show="activeTab === 'about'" class="tab-fade page-wrapper">
       
       <header id="about-header" class="fade-in-up">
-        <div class="badge">Eksplorasi Spasial</div>
+        <div class="badge">Eksplorasi Wisata</div>
         <h1>Harmoni Warisan</h1>
-        <p>Menjelajahi dokumentasi spasial Candi Selogriyo. Integrasi data historis, topografi alam, dan infrastruktur modern dalam satu ekosistem Digital Twin.</p>
+        <p>Menjelajahi dokumentasi spasial Candi Selogriyo. Integrasi data historis, topografi alam.</p>
       </header>
 
       <div class="about-nav fade-in-up delay-1">
